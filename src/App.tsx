@@ -22,6 +22,14 @@ export default function App() {
     (localStorage.getItem('poe-account') && localStorage.getItem('poe-sessid')) ? 'pricer' : 'login'
   );
 
+  // Helper to resolve asset paths correctly on GitHub Pages
+  const getAssetPath = (path: string) => {
+    const base = import.meta.env.BASE_URL || './';
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    const finalPath = base.endsWith('/') ? `${base}${cleanPath}` : `${base}/${cleanPath}`;
+    return finalPath;
+  };
+
 
 
   const [selectedTabIndex, setSelectedTabIndex] = useState<number | 'all'>(-1);
@@ -354,7 +362,7 @@ export default function App() {
 
           <div className="header-logo" onClick={() => setActiveTab('pricer')} style={{ cursor: 'pointer', flex: 1, textAlign: 'center', display: 'flex', justifyContent: 'center' }}>
             <img
-              src="/default.webp"
+              src={getAssetPath('/default.webp')}
               alt="Path of Exile"
               style={{ height: '160px', display: 'block' }}
             />
