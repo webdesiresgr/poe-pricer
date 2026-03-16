@@ -77,13 +77,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.titlebar-spacer {
-  height: 38px;
-  width: 100%;
-  -webkit-app-region: drag;
-  background-color: #000000;
-  border-bottom: 1px solid var(--panel-border);
-}
 
 .container {
   max-width: 1200px;

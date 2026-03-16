@@ -340,7 +340,6 @@ export default function App() {
 
   return (
     <div>
-      <div className="titlebar-spacer" />
 
       {/* FULL WIDTH HEADER */}
       <div className="poe-login-header">
