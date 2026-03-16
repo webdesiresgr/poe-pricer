@@ -27,7 +27,14 @@
     "win": {
       "target": "nsis",
       "artifactName": "${productName} Setup ${version}.${ext}"
-    }
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "webdesiresgr",
+        "repo": "poe-pricer"
+      }
+    ]
   },
   "dependencies": {
     "axios": "^1.13.6",
